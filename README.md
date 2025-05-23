@@ -5,7 +5,9 @@ use your android smartphone as sms-gateway api ( using adb,php)
 
 بمجرد تنزيل تعريف Android Platform tools يمكنك اجراء جميع العمليات مثل ( ارسال رسالة , اجراء اتصال , اغلاق الاتصال , مجيب آلي إلى أخره )
 مثال : ارسال رسالة ( أندرويد 10+)
+
 adb shell service call isms 5 i32 0 s16 "com.android.mms.service" s16 "null" s16 "0999999999" s16 "null" s16 'الرسالة هنا' s16 "null" s16 "null" i32 0 i64 0
+
 يمكنك استخدامه مباشرا ك كود bash
 
 يوجد مشروع اخر قيد التطوير وهو لتفعيل البرامج OTP عبر الاتصال وليس SMS ايضا !
@@ -42,10 +44,13 @@ $valid_api_key = "YOUR_SECRET_KEY";
 طريقة الإستعمال ::
 
 
+
 1. عبر طلب GET
+
 http://your-server.com/index.php?api_key=SECRET&phone=+963990385460&message=مرحبا%20هذه%20رسالة%20تجريبية
 
 2. عبر طلب POST
+
 bash
 curl -X POST \
   -H "API-Key: SECRET" \
