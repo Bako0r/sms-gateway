@@ -4,9 +4,12 @@ use your android smartphone as sms-gateway api ( using adb,php)
 مشروع SMS Gateway يسمح لك بإرسال رسائل SMS عبر هاتف أندرويد باستخدام واجهة برمجة تطبيقات (API) بسيطة. يعتمد المشروع على اتصال ADB مع الهاتف وخادم ويب مكتوب بلغة PHP.
 
 بمجرد تنزيل تعريف Android Platform tools يمكنك اجراء جميع العمليات مثل ( ارسال رسالة , اجراء اتصال , اغلاق الاتصال , مجيب آلي إلى أخره )
+
 مثال : ارسال رسالة ( أندرويد 10+)
 
+
 adb shell service call isms 5 i32 0 s16 "com.android.mms.service" s16 "null" s16 "0999999999" s16 "null" s16 'الرسالة هنا' s16 "null" s16 "null" i32 0 i64 0
+
 
 يمكنك استخدامه مباشرا ك كود bash
 
