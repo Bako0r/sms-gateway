@@ -56,7 +56,9 @@ curl -X POST \
   -H "API-Key: SECRET" \
   -d "phone=+963990385460&message=مرحبا من cURL" \
   http://your-server.com/index.php
+  
 مثال على الرد الناجح:
+
 json
 {
     "status": "success",
