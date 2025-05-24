@@ -19,7 +19,7 @@ try {
 
   
     $phone = $_REQUEST['phone'] ?? '';
-    $message = urldecode($_REQUEST['message'] ?? ''); // فك تشفير URL
+    $message = urldecode($_REQUEST['message'] ?? '');
 
     
     if (empty($phone) || !preg_match('/^\+?[0-9]\d{1,14}$/', $phone)) {
