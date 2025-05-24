@@ -54,8 +54,11 @@ SMS:
 
 
 http://your-server.com/index.php?api_key=SECRET&phone=+963990385460&message=مرحبا%20هذه%20رسالة%20تجريبية
+
 أو
+
 Whatsapp:
+
 http://your-server.com/sms_gateway/whatsapp.php?api_key=KEY&phone=963990385460&message=Your%20code%20is%20828
 
 
