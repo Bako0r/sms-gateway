@@ -40,6 +40,7 @@ Android Platform Tools (ADB).
 افتح ملف index.php وغير القيم التالية:
 
 $valid_api_key = "YOUR_SECRET_KEY"; 
+
  استبدلها بمفتاح سري خاص بك
  3. تفعيل USB Debugging على الهاتف
 اذهب إلى إعدادات المطورين على الهاتف.
@@ -53,8 +54,10 @@ $valid_api_key = "YOUR_SECRET_KEY";
 
 
 1. عبر طلب GET
+2. 
 
 http://your-server.com/index.php?api_key=SECRET&phone=+963990385460&message=مرحبا%20هذه%20رسالة%20تجريبية
+
 
 2. عبر طلب POST
 
@@ -63,8 +66,10 @@ curl -X POST \
   -H "API-Key: SECRET" \
   -d "phone=+963990385460&message=مرحبا من cURL" \
   http://your-server.com/index.php
+
   
 مثال على الرد الناجح:
+
 
 json
 {
