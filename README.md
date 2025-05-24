@@ -50,7 +50,7 @@ $valid_api_key = "YOUR_SECRET_KEY";
 فعّل خيار USB Debugging.
 
 4. قم بتوصيل الهاتف بالكمبيوتر
-5. 
+
 وصّل الهاتف عبر USB واسمح للاتصال عند ظهور إشعار طلب الازن.
 
 
@@ -60,7 +60,7 @@ $valid_api_key = "YOUR_SECRET_KEY";
 
 
 1. عبر طلب GET
-2. 
+
 
 http://your-server.com/index.php?api_key=SECRET&phone=+963990385460&message=مرحبا%20هذه%20رسالة%20تجريبية
 
