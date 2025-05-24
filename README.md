@@ -1,23 +1,14 @@
-# SMS-Gateway
-use your android smartphone as sms-gateway api ( using adb,php)
+# OTP-Gateway
+Use your android smartphone as OTP-gateway api SMS + whatsapp (using adb,php)
 
-مشروع SMS Gateway يسمح لك بإرسال رسائل SMS عبر هاتف أندرويد باستخدام واجهة برمجة تطبيقات (API) بسيطة. يعتمد المشروع على اتصال ADB مع الهاتف وخادم ويب مكتوب بلغة PHP.
+مشروع OTP Gateway يسمح لك بإرسال رسائل SMS + Whatsapp عبر هاتف أندرويد باستخدام واجهة برمجة تطبيقات (API) بسيطة. يعتمد المشروع على اتصال ADB مع الهاتف وخادم ويب مكتوب بلغة PHP.
 
-بمجرد تنزيل تعريف Android Platform tools يمكنك اجراء جميع العمليات مثل ( ارسال رسالة , اجراء اتصال , اغلاق الاتصال , مجيب آلي إلى أخره )
-
-مثال : ارسال رسالة ( أندرويد 10+)
-
-
-adb shell service call isms 5 i32 0 s16 "com.android.mms.service" s16 "null" s16 "0999999999" s16 "null" s16 'الرسالة هنا' s16 "null" s16 "null" i32 0 i64 0
-
-
-يمكنك استخدامه مباشرا ك كود bash
-
-يوجد مشروع اخر قيد التطوير وهو لتفعيل البرامج OTP عبر الاتصال وليس SMS ايضا !
- لكن في هذا المشروع سنتحدث عن SMS Gateway otp عن طريق ربطه ب php api
+بمجرد تنزيل تعريف Android Platform tools يمكنك اجراء جميع العمليات مثل ( ارسال رسالة SMS, رسالة واتس اب , اجراء اتصال , اغلاق الاتصال , مجيب آلي إلى أخره )
 
  الخصائص الرئيسية :
- إرسال رسائل SMS عبر واجهة API.
+ إرسال رسائل SMS عبر واجهة API. بإستخدام 
+index.php
+أو رسالة whatsapp بإستخدام whatsapp.php
 تسجيل النشاطات في ملف سجلات (sms_log.txt).
 
 التحقق من الصلاحيات باستخدام مفتاح API.
@@ -37,9 +28,9 @@ Android Platform Tools (ADB).
 طريقة الإعداد ::
 1. تأكد من تنزيل تعريفات الـADB الخاصة بالاندرويد في الكومبيوتر الخاص بك
 2. تعديل الإعدادات
-افتح ملف index.php وغير القيم التالية:
+افتح ملف index.php و whatsapp.php وغير القيم التالية:
 
-$valid_api_key = "YOUR_SECRET_KEY"; 
+$valid_api_key = "KEY"; 
 
  استبدلها بمفتاح سري خاص بك
 
@@ -54,15 +45,19 @@ $valid_api_key = "YOUR_SECRET_KEY";
 وصّل الهاتف عبر USB واسمح للاتصال عند ظهور إشعار طلب الازن.
 
 
-
 طريقة الإستعمال ::
 
 
 
 1. عبر طلب GET
+SMS:
 
 
 http://your-server.com/index.php?api_key=SECRET&phone=+963990385460&message=مرحبا%20هذه%20رسالة%20تجريبية
+أو
+Whatsapp:
+http://your-server.com/sms_gateway/whatsapp.php?api_key=KEY&phone=963990385460&message=Your%20code%20is%20828
+
 
 
 2. عبر طلب POST
@@ -72,6 +67,14 @@ curl -X POST \
   -H "API-Key: SECRET" \
   -d "phone=+963990385460&message=مرحبا من cURL" \
   http://your-server.com/index.php
+
+  or whatsapp:
+
+bash
+curl -X POST \
+  -H "API-Key: SECRET" \
+  -d "phone=+963990385460&message=مرحبا من cURL" \
+  http://your-server.com/whatsapp.php
 
   
 مثال على الرد الناجح:
