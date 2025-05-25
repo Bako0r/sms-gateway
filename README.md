@@ -53,13 +53,13 @@ $valid_api_key = "KEY";
 SMS:
 
 
-http://your-server.com/index.php?api_key=SECRET&phone=+963990385460&message=مرحبا%20هذه%20رسالة%20تجريبية
+http://your-server.com/index.php?api_key=SECRET&phone=+963999999999&message=مرحبا%20هذه%20رسالة%20تجريبية
 
 أو
 
 Whatsapp:
 
-http://your-server.com/sms_gateway/whatsapp.php?api_key=KEY&phone=963990385460&message=Your%20code%20is%20828
+http://your-server.com/sms_gateway/whatsapp.php?api_key=KEY&phone=9639999999990&message=Your%20code%20is%20828
 
 
 
@@ -68,7 +68,7 @@ http://your-server.com/sms_gateway/whatsapp.php?api_key=KEY&phone=963990385460&m
 bash
 curl -X POST \
   -H "API-Key: SECRET" \
-  -d "phone=+963990385460&message=مرحبا من cURL" \
+  -d "phone=+963999999999&message=مرحبا من cURL" \
   http://your-server.com/index.php
 
   or whatsapp:
@@ -76,7 +76,7 @@ curl -X POST \
 bash
 curl -X POST \
   -H "API-Key: SECRET" \
-  -d "phone=+963990385460&message=مرحبا من cURL" \
+  -d "phone=+963999999999&message=مرحبا من cURL" \
   http://your-server.com/whatsapp.php
 
   
@@ -88,7 +88,7 @@ json
     "status": "success",
     "message": "تم الإرسال بنجاح",
     "data": {
-        "phone": "+963990385460",
+        "phone": "+96399999999",
         "message": "مرحبا هذه رسالة تجريبية"
     }
 }
